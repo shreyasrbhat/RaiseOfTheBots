@@ -11,5 +11,6 @@ services:
       #mount all the code in app directory in local to app directory of conatiner
       - ./chatbot/:/chatbot
     working_dir: /chatbot
-    command: > #start the django server
-      sh -c "jupyter notebook  --ip='*' --port=8888 --no-browser --allow-root"
+    command: > 
+      sh -c "conda update -n base -c defaults conda && 
+      jupyter notebook  --ip='*' --port=8888 --no-browser --allow-root"
